@@ -1,0 +1,9 @@
+input.ng-invalid{
+    border-left: 4px solid blue;
+}
+input.ng-valid{
+    border-left: 4px solid paleturquoise;
+}
+.error{
+    color: red;
+}

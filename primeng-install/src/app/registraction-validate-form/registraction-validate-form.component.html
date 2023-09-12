@@ -1,0 +1,25 @@
+<p>registraction-validate-form works!</p>
+<form #registrationForm="ngForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input
+      type="text"
+      id="name"
+      name="name"
+      [(ngModel)]="user.name"
+      required
+      minlength="2"
+      #nameInput="ngModel"
+    />
+    <div *ngIf="nameInput.invalid && nameInput.touched" class="alert alert-danger">
+      <div *ngIf="nameInput.errors?.['required']">Name is required.</div>
+      <div *ngIf="nameInput.errors?.['minlength']">Name must be at least 2 characters long.</div>
+    </div>
+  </div>
+
+  <!-- ... other form fields ... -->
+
+  <button type="submit" [disabled]="registrationForm.invalid">Submit</button>
+</form>
+
+

@@ -1,0 +1,42 @@
+[
+    {
+    "id":1,
+    "name":"meet",
+    "email":"meetjani801@gmail.com",
+    "gender":"male",
+    "dept":"computer engneering",
+    "language":"gujarati"
+},
+{
+     "id":2,
+    "name":"rajesh",
+    "email":"rajesh54@gmail.com",
+    "gender":"male",
+    "dept":"civil engneering",
+    "language":"German"
+},
+{
+ "id":3,
+    "name":"raman",
+    "email":"raman65@gmail.com",
+    "gender":"male",
+    "dept":"electrical engneering",
+    "language":"france"
+},
+{
+    "id":4,
+    "name":"mayuri",
+    "email":"mayuri54@gmail.com",
+    "gender":"Female",
+    "dept":"mechenical engneering",
+    "language":"chinese"
+},
+{
+    "id":5,
+    "name":"ramini",
+    "email":"ramini87#@gmail.com",
+    "gender":"Female",
+    "dept":"mechenical engneering",
+    "language":"hindi"
+}
+]

@@ -1,0 +1,15 @@
+<p>last-namefield works!</p>
+<form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="lastName">Last Name<span class="required">*</span></label>
+    <input type="text" id="lastName" name="lastName" class="form-control" 
+           formControlName="lastName">
+    <div *ngIf="submitted && registrationForm.get('lastName')hasError('required')" class="text-danger">
+      Last Name is required.
+    </div>
+  </div>
+
+  <!-- Add other form fields here -->
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

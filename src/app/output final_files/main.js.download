@@ -1,0 +1,1886 @@
+"use strict";
+(self["webpackChunkprimeng_install"] = self["webpackChunkprimeng_install"] || []).push([["main"],{
+
+/***/ 7172:
+/*!**************************************************!*\
+  !*** ./src/app/age-field/age-field.component.ts ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   AgeFieldComponent: () => (/* binding */ AgeFieldComponent)
+/* harmony export */ });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 1699);
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ 8849);
+var _class;
+
+
+class AgeFieldComponent {
+  calculateAge1() {
+    if (this.dob1) {
+      const birthDate = new Date(this.dob1);
+      const today = new Date();
+      const ageTime = today.getTime() - birthDate.getTime();
+      this['age1'] = Math.floor(ageTime / (1000 * 60 * 60 * 24 * 365));
+    } else {
+      this['age1'] = 1234;
+    }
+  }
+}
+_class = AgeFieldComponent;
+_class.ɵfac = function AgeFieldComponent_Factory(t) {
+  return new (t || _class)();
+};
+_class.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
+  type: _class,
+  selectors: [["app-age-field"]],
+  decls: 11,
+  vars: 2,
+  consts: [["type", "date", "name", "dob", 3, "ngModel", "ngModelChange", "change"]],
+  template: function AgeFieldComponent_Template(rf, ctx) {
+    if (rf & 1) {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "p");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "age-field works!");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "span");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3, "Date of Birth: ");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "input", 0);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngModelChange", function AgeFieldComponent_Template_input_ngModelChange_4_listener($event) {
+        return ctx.dob1 = $event;
+      })("change", function AgeFieldComponent_Template_input_change_4_listener() {
+        return ctx.calculateAge1();
+      });
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]()();
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](5, "br");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "span");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](8, "br");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "button");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](10, "submit");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    }
+    if (rf & 2) {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](4);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngModel", ctx.dob1);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"]("Age: ", ctx.age1, "");
+    }
+  },
+  dependencies: [_angular_forms__WEBPACK_IMPORTED_MODULE_1__.DefaultValueAccessor, _angular_forms__WEBPACK_IMPORTED_MODULE_1__.NgControlStatus, _angular_forms__WEBPACK_IMPORTED_MODULE_1__.NgModel],
+  styles: ["/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsInNvdXJjZVJvb3QiOiIifQ== */"]
+});
+
+/***/ }),
+
+/***/ 6401:
+/*!**********************************!*\
+  !*** ./src/app/app.component.ts ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   AppComponent: () => (/* binding */ AppComponent)
+/* harmony export */ });
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/forms */ 8849);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/core */ 1699);
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @angular/common */ 6575);
+/* harmony import */ var _first_namefield_first_namefield_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./first-namefield/first-namefield.component */ 4920);
+/* harmony import */ var _last_namefield_last_namefield_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./last-namefield/last-namefield.component */ 1863);
+/* harmony import */ var _email_field_email_field_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./email-field/email-field.component */ 1096);
+/* harmony import */ var _moblienumber_field_moblienumber_field_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./moblienumber-field/moblienumber-field.component */ 8744);
+/* harmony import */ var _department_field_department_field_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./department-field/department-field.component */ 6384);
+/* harmony import */ var _gender_field_gender_field_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./gender-field/gender-field.component */ 4085);
+/* harmony import */ var _language_field_language_field_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./language-field/language-field.component */ 6564);
+/* harmony import */ var _salary_field_salary_field_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./salary-field/salary-field.component */ 3509);
+/* harmony import */ var _dob_field_dob_field_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./dob-field/dob-field.component */ 9359);
+/* harmony import */ var _age_field_age_field_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./age-field/age-field.component */ 7172);
+/* harmony import */ var _registraction_grid_registraction_grid_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./registraction-grid/registraction-grid.component */ 1260);
+/* harmony import */ var _registration_management_registration_management_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./registration-management/registration-management.component */ 9625);
+/* harmony import */ var _registraction_validate_form_registraction_validate_form_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./registraction-validate-form/registraction-validate-form.component */ 5012);
+/* harmony import */ var _studentlist_studentlist_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./studentlist/studentlist.component */ 8672);
+var _class;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function AppComponent_div_19_Template(rf, ctx) {
+  if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_14__["ɵɵelementStart"](0, "div", 12);
+    _angular_core__WEBPACK_IMPORTED_MODULE_14__["ɵɵtext"](1, " Salutation is required. ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_14__["ɵɵelementEnd"]();
+  }
+}
+class AppComponent {
+  constructor(fb) {
+    this.fb = fb;
+    this.title = 'primeng-install';
+    this.submitted = false;
+  }
+  ngOnInit() {
+    this.registrationForm = this.fb.group({
+      salutation: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_15__.Validators.required]
+      // Add other form fields here with their respective validators
+    });
+  }
+
+  onSubmit() {
+    this.submitted = true;
+    if (this.registrationForm.invalid) {
+      return;
+    }
+    // Form is valid, continue with submission
+    console.log('Form submitted:', this.registrationForm.value);
+  }
+}
+_class = AppComponent;
+_class.ɵfac = function AppComponent_Factory(t) {
+  return new (t || _class)(_angular_core__WEBPACK_IMPORTED_MODULE_14__["ɵɵdirectiveInject"](_angular_forms__WEBPACK_IMPORTED_MODULE_15__.FormBuilder));
+};
+_class.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_14__["ɵɵdefineComponent"]({
+  type: _class,
+  selectors: [["app-root"]],
+  decls: 36,
+  vars: 3,
+  consts: [[3, "formGroup", "ngSubmit"], [1, "form-group"], ["for", "salutation"], [1, "required"], ["id", "salutation", "name", "salutation", "formControlName", "salutation", 1, "form-control"], ["value", "", "disabled", "", "selected", ""], ["value", "Mr"], ["value", "Mrs"], ["value", "Ms"], ["value", "Dr"], ["class", "text-danger", 4, "ngIf", "ngIfHasError"], ["type", "submit", 1, "btn", "btn-primary"], [1, "text-danger"]],
+  template: function AppComponent_Template(rf, ctx) {
+    if (rf & 1) {
+      _angular_core__WEBPACK_IMPORTED_MODULE_14__["ɵɵelementStart"](0, "h2");
+      _angular_core__WEBPACK_IMPORTED_MODULE_14__["ɵɵtext"](1, "form");
+      _angular_core__WEBPACK_IMPORTED_MODULE_14__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_14__["ɵɵelementStart"](2, "form", 0);
+      _angular_core__WEBPACK_IMPORTED_MODULE_14__["ɵɵlistener"]("ngSubmit", function AppComponent_Template_form_ngSubmit_2_listener() {
+        return ctx.onSubmit();
+      });
+      _angular_core__WEBPACK_IMPORTED_MODULE_14__["ɵɵelementStart"](3, "div", 1)(4, "label", 2);
+      _angular_core__WEBPACK_IMPORTED_MODULE_14__["ɵɵtext"](5, "Salutation");
+      _angular_core__WEBPACK_IMPORTED_MODULE_14__["ɵɵelementStart"](6, "span", 3);
+      _angular_core__WEBPACK_IMPORTED_MODULE_14__["ɵɵtext"](7, "*");
+      _angular_core__WEBPACK_IMPORTED_MODULE_14__["ɵɵelementEnd"]()();
+      _angular_core__WEBPACK_IMPORTED_MODULE_14__["ɵɵelementStart"](8, "select", 4)(9, "option", 5);
+      _angular_core__WEBPACK_IMPORTED_MODULE_14__["ɵɵtext"](10, "Select Salutation");
+      _angular_core__WEBPACK_IMPORTED_MODULE_14__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_14__["ɵɵelementStart"](11, "option", 6);
+      _angular_core__WEBPACK_IMPORTED_MODULE_14__["ɵɵtext"](12, "Mr");
+      _angular_core__WEBPACK_IMPORTED_MODULE_14__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_14__["ɵɵelementStart"](13, "option", 7);
+      _angular_core__WEBPACK_IMPORTED_MODULE_14__["ɵɵtext"](14, "Mrs");
+      _angular_core__WEBPACK_IMPORTED_MODULE_14__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_14__["ɵɵelementStart"](15, "option", 8);
+      _angular_core__WEBPACK_IMPORTED_MODULE_14__["ɵɵtext"](16, "Ms");
+      _angular_core__WEBPACK_IMPORTED_MODULE_14__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_14__["ɵɵelementStart"](17, "option", 9);
+      _angular_core__WEBPACK_IMPORTED_MODULE_14__["ɵɵtext"](18, "Dr");
+      _angular_core__WEBPACK_IMPORTED_MODULE_14__["ɵɵelementEnd"]()();
+      _angular_core__WEBPACK_IMPORTED_MODULE_14__["ɵɵtemplate"](19, AppComponent_div_19_Template, 2, 0, "div", 10);
+      _angular_core__WEBPACK_IMPORTED_MODULE_14__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_14__["ɵɵelementStart"](20, "button", 11);
+      _angular_core__WEBPACK_IMPORTED_MODULE_14__["ɵɵtext"](21, "Submit");
+      _angular_core__WEBPACK_IMPORTED_MODULE_14__["ɵɵelementEnd"]()();
+      _angular_core__WEBPACK_IMPORTED_MODULE_14__["ɵɵelement"](22, "app-first-namefield")(23, "app-last-namefield")(24, "app-email-field")(25, "app-moblienumber-field")(26, "app-department-field")(27, "app-gender-field")(28, "app-language-field")(29, "app-salary-field")(30, "app-dob-field")(31, "app-age-field")(32, "app-registraction-grid")(33, "app-registration-management")(34, "app-registraction-validate-form")(35, "app-studentlist");
+    }
+    if (rf & 2) {
+      _angular_core__WEBPACK_IMPORTED_MODULE_14__["ɵɵadvance"](2);
+      _angular_core__WEBPACK_IMPORTED_MODULE_14__["ɵɵproperty"]("formGroup", ctx.registrationForm);
+      _angular_core__WEBPACK_IMPORTED_MODULE_14__["ɵɵadvance"](17);
+      _angular_core__WEBPACK_IMPORTED_MODULE_14__["ɵɵproperty"]("ngIf", ctx.submitted && ctx.registrationForm.get("salutation"))("ngIfHasError", "required");
+    }
+  },
+  dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_16__.NgIf, _angular_forms__WEBPACK_IMPORTED_MODULE_15__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_15__.NgSelectOption, _angular_forms__WEBPACK_IMPORTED_MODULE_15__["ɵNgSelectMultipleOption"], _angular_forms__WEBPACK_IMPORTED_MODULE_15__.SelectControlValueAccessor, _angular_forms__WEBPACK_IMPORTED_MODULE_15__.NgControlStatus, _angular_forms__WEBPACK_IMPORTED_MODULE_15__.NgControlStatusGroup, _angular_forms__WEBPACK_IMPORTED_MODULE_15__.FormGroupDirective, _angular_forms__WEBPACK_IMPORTED_MODULE_15__.FormControlName, _first_namefield_first_namefield_component__WEBPACK_IMPORTED_MODULE_0__.FirstNamefieldComponent, _last_namefield_last_namefield_component__WEBPACK_IMPORTED_MODULE_1__.LastNamefieldComponent, _email_field_email_field_component__WEBPACK_IMPORTED_MODULE_2__.EmailFieldComponent, _moblienumber_field_moblienumber_field_component__WEBPACK_IMPORTED_MODULE_3__.MoblienumberFieldComponent, _department_field_department_field_component__WEBPACK_IMPORTED_MODULE_4__.DepartmentFieldComponent, _gender_field_gender_field_component__WEBPACK_IMPORTED_MODULE_5__.GenderFieldComponent, _language_field_language_field_component__WEBPACK_IMPORTED_MODULE_6__.LanguageFieldComponent, _salary_field_salary_field_component__WEBPACK_IMPORTED_MODULE_7__.SalaryFieldComponent, _dob_field_dob_field_component__WEBPACK_IMPORTED_MODULE_8__.DobFieldComponent, _age_field_age_field_component__WEBPACK_IMPORTED_MODULE_9__.AgeFieldComponent, _registraction_grid_registraction_grid_component__WEBPACK_IMPORTED_MODULE_10__.RegistractionGridComponent, _registration_management_registration_management_component__WEBPACK_IMPORTED_MODULE_11__.RegistrationManagementComponent, _registraction_validate_form_registraction_validate_form_component__WEBPACK_IMPORTED_MODULE_12__.RegistractionValidateFormComponent, _studentlist_studentlist_component__WEBPACK_IMPORTED_MODULE_13__.StudentlistComponent],
+  styles: ["/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsInNvdXJjZVJvb3QiOiIifQ== */"]
+});
+
+/***/ }),
+
+/***/ 8629:
+/*!*******************************!*\
+  !*** ./src/app/app.module.ts ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   AppModule: () => (/* binding */ AppModule)
+/* harmony export */ });
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @angular/platform-browser */ 6480);
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @angular/forms */ 8849);
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./app.component */ 6401);
+/* harmony import */ var _first_namefield_first_namefield_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./first-namefield/first-namefield.component */ 4920);
+/* harmony import */ var _last_namefield_last_namefield_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./last-namefield/last-namefield.component */ 1863);
+/* harmony import */ var _email_field_email_field_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./email-field/email-field.component */ 1096);
+/* harmony import */ var _moblienumber_field_moblienumber_field_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./moblienumber-field/moblienumber-field.component */ 8744);
+/* harmony import */ var _department_field_department_field_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./department-field/department-field.component */ 6384);
+/* harmony import */ var _department_field_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./department-field.service */ 7982);
+/* harmony import */ var _gender_field_gender_field_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./gender-field/gender-field.component */ 4085);
+/* harmony import */ var _language_field_language_field_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./language-field/language-field.component */ 6564);
+/* harmony import */ var _salary_field_salary_field_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./salary-field/salary-field.component */ 3509);
+/* harmony import */ var _dob_field_dob_field_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./dob-field/dob-field.component */ 9359);
+/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @angular/platform-browser/animations */ 4987);
+/* harmony import */ var _angular_material_input__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @angular/material/input */ 26);
+/* harmony import */ var _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! @angular/material/datepicker */ 2226);
+/* harmony import */ var _age_field_age_field_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./age-field/age-field.component */ 7172);
+/* harmony import */ var _angular_material_table__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! @angular/material/table */ 6798);
+/* harmony import */ var _angular_material_paginator__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! @angular/material/paginator */ 9687);
+/* harmony import */ var _angular_material_sort__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! @angular/material/sort */ 7963);
+/* harmony import */ var primeng_table__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! primeng/table */ 6192);
+/* harmony import */ var _registraction_grid_registraction_grid_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./registraction-grid/registraction-grid.component */ 1260);
+/* harmony import */ var _registration_management_registration_management_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./registration-management/registration-management.component */ 9625);
+/* harmony import */ var _registraction_validate_form_registraction_validate_form_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./registraction-validate-form/registraction-validate-form.component */ 5012);
+/* harmony import */ var _registraction_entry_registraction_entry_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./registraction-entry/registraction-entry.component */ 2429);
+/* harmony import */ var _department_entry_department_entry_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./department-entry/department-entry.component */ 5474);
+/* harmony import */ var _studentlist_studentlist_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./studentlist/studentlist.component */ 8672);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @angular/core */ 1699);
+var _class;
+
+ // Import ReactiveFormsModule
+
+
+
+
+
+
+
+
+
+
+
+
+
+ // Import MatInputModule and other Material modules as needed
+
+
+
+
+
+
+
+
+
+
+
+
+
+class AppModule {}
+_class = AppModule;
+_class.ɵfac = function AppModule_Factory(t) {
+  return new (t || _class)();
+};
+_class.ɵmod = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_18__["ɵɵdefineNgModule"]({
+  type: _class,
+  bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_0__.AppComponent]
+});
+_class.ɵinj = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_18__["ɵɵdefineInjector"]({
+  providers: [_department_field_service__WEBPACK_IMPORTED_MODULE_6__.DepartmentFieldService],
+  imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_19__.BrowserModule, _angular_forms__WEBPACK_IMPORTED_MODULE_20__.ReactiveFormsModule, _angular_forms__WEBPACK_IMPORTED_MODULE_20__.FormsModule, _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_21__.BrowserAnimationsModule, _angular_material_input__WEBPACK_IMPORTED_MODULE_22__.MatInputModule, _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_23__.MatDatepickerModule, _angular_material_table__WEBPACK_IMPORTED_MODULE_24__.MatTableModule, _angular_material_paginator__WEBPACK_IMPORTED_MODULE_25__.MatPaginatorModule, _angular_material_sort__WEBPACK_IMPORTED_MODULE_26__.MatSortModule, primeng_table__WEBPACK_IMPORTED_MODULE_27__.TableModule]
+});
+(function () {
+  (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_18__["ɵɵsetNgModuleScope"](AppModule, {
+    declarations: [_app_component__WEBPACK_IMPORTED_MODULE_0__.AppComponent, _first_namefield_first_namefield_component__WEBPACK_IMPORTED_MODULE_1__.FirstNamefieldComponent, _last_namefield_last_namefield_component__WEBPACK_IMPORTED_MODULE_2__.LastNamefieldComponent, _email_field_email_field_component__WEBPACK_IMPORTED_MODULE_3__.EmailFieldComponent, _moblienumber_field_moblienumber_field_component__WEBPACK_IMPORTED_MODULE_4__.MoblienumberFieldComponent, _department_field_department_field_component__WEBPACK_IMPORTED_MODULE_5__.DepartmentFieldComponent, _gender_field_gender_field_component__WEBPACK_IMPORTED_MODULE_7__.GenderFieldComponent, _language_field_language_field_component__WEBPACK_IMPORTED_MODULE_8__.LanguageFieldComponent, _salary_field_salary_field_component__WEBPACK_IMPORTED_MODULE_9__.SalaryFieldComponent, _dob_field_dob_field_component__WEBPACK_IMPORTED_MODULE_10__.DobFieldComponent, _age_field_age_field_component__WEBPACK_IMPORTED_MODULE_11__.AgeFieldComponent, _registraction_grid_registraction_grid_component__WEBPACK_IMPORTED_MODULE_12__.RegistractionGridComponent, _registration_management_registration_management_component__WEBPACK_IMPORTED_MODULE_13__.RegistrationManagementComponent, _registraction_validate_form_registraction_validate_form_component__WEBPACK_IMPORTED_MODULE_14__.RegistractionValidateFormComponent, _registraction_entry_registraction_entry_component__WEBPACK_IMPORTED_MODULE_15__.RegistractionEntryComponent, _department_entry_department_entry_component__WEBPACK_IMPORTED_MODULE_16__.DepartmentEntryComponent, _studentlist_studentlist_component__WEBPACK_IMPORTED_MODULE_17__.StudentlistComponent],
+    imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_19__.BrowserModule, _angular_forms__WEBPACK_IMPORTED_MODULE_20__.ReactiveFormsModule, _angular_forms__WEBPACK_IMPORTED_MODULE_20__.FormsModule, _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_21__.BrowserAnimationsModule, _angular_material_input__WEBPACK_IMPORTED_MODULE_22__.MatInputModule, _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_23__.MatDatepickerModule, _angular_material_table__WEBPACK_IMPORTED_MODULE_24__.MatTableModule, _angular_material_paginator__WEBPACK_IMPORTED_MODULE_25__.MatPaginatorModule, _angular_material_sort__WEBPACK_IMPORTED_MODULE_26__.MatSortModule, primeng_table__WEBPACK_IMPORTED_MODULE_27__.TableModule]
+  });
+})();
+
+/***/ }),
+
+/***/ 5474:
+/*!****************************************************************!*\
+  !*** ./src/app/department-entry/department-entry.component.ts ***!
+  \****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Department: () => (/* binding */ Department),
+/* harmony export */   DepartmentEntryComponent: () => (/* binding */ DepartmentEntryComponent)
+/* harmony export */ });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 1699);
+var _class;
+
+class Department {
+  constructor(id, departmentName) {
+    this.id = id;
+    this.departmentName = departmentName;
+  }
+}
+class DepartmentEntryComponent {}
+_class = DepartmentEntryComponent;
+_class.ɵfac = function DepartmentEntryComponent_Factory(t) {
+  return new (t || _class)();
+};
+_class.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
+  type: _class,
+  selectors: [["app-department-entry"]],
+  decls: 2,
+  vars: 0,
+  template: function DepartmentEntryComponent_Template(rf, ctx) {
+    if (rf & 1) {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "p");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "department-entry works!");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    }
+  },
+  styles: ["/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsInNvdXJjZVJvb3QiOiIifQ== */"]
+});
+
+/***/ }),
+
+/***/ 7982:
+/*!*********************************************!*\
+  !*** ./src/app/department-field.service.ts ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   DepartmentFieldService: () => (/* binding */ DepartmentFieldService)
+/* harmony export */ });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 1699);
+var _class;
+
+class DepartmentFieldService {
+  constructor() {
+    this.departments = [{
+      id: 1,
+      name: 'HR'
+    }, {
+      id: 2,
+      name: 'IT'
+    }, {
+      id: 3,
+      name: 'Finance'
+    }
+    // Add more departments as needed
+    ];
+  }
+
+  getDepartments() {
+    return this.departments;
+  }
+}
+_class = DepartmentFieldService;
+_class.ɵfac = function DepartmentFieldService_Factory(t) {
+  return new (t || _class)();
+};
+_class.ɵprov = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({
+  token: _class,
+  factory: _class.ɵfac,
+  providedIn: 'root'
+});
+
+/***/ }),
+
+/***/ 6384:
+/*!****************************************************************!*\
+  !*** ./src/app/department-field/department-field.component.ts ***!
+  \****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   DepartmentFieldComponent: () => (/* binding */ DepartmentFieldComponent)
+/* harmony export */ });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ 1699);
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ 8849);
+/* harmony import */ var _department_field_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../department-field.service */ 7982);
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common */ 6575);
+var _class;
+
+
+
+
+function DepartmentFieldComponent_option_17_Template(rf, ctx) {
+  if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "option", 11);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+  }
+  if (rf & 2) {
+    const dept_r1 = ctx.$implicit;
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("value", dept_r1.id);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate1"](" ", dept_r1.name, " ");
+  }
+}
+class DepartmentFieldComponent {
+  constructor(fb, departmentService // Inject the DepartmentService
+  ) {
+    this.fb = fb;
+    this.departmentService = departmentService;
+    this.submitted = false;
+    this.departments = [];
+  }
+  ngOnInit() {
+    this.registrationForm = this.fb.group({
+      // Other form fields
+      department: ['']
+    });
+    // Retrieve departments from the service
+    this.departments = this.departmentService.getDepartments();
+  }
+  onSubmit() {
+    this.submitted = true;
+    if (this.registrationForm.invalid) {
+      return;
+    }
+    // Form is valid, continue with submission
+    console.log('Form submitted:', this.registrationForm.value);
+  }
+}
+_class = DepartmentFieldComponent;
+_class.ɵfac = function DepartmentFieldComponent_Factory(t) {
+  return new (t || _class)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_forms__WEBPACK_IMPORTED_MODULE_2__.FormBuilder), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_department_field_service__WEBPACK_IMPORTED_MODULE_0__.DepartmentFieldService));
+};
+_class.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({
+  type: _class,
+  selectors: [["app-department-field"]],
+  decls: 20,
+  vars: 2,
+  consts: [[3, "formGroup", "ngSubmit"], [1, "form-group"], ["for", "department"], ["id", "department", "name", "department", "formControlName", "department", 1, "form-control"], ["value", ""], ["value", "computer engneering"], ["value", "electrical engneering"], ["value", "mechenical engneering"], ["value", "civil engneering"], [3, "value", 4, "ngFor", "ngForOf"], ["type", "submit", 1, "btn", "btn-primary"], [3, "value"]],
+  template: function DepartmentFieldComponent_Template(rf, ctx) {
+    if (rf & 1) {
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "p");
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1, "department-field works!");
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "form", 0);
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("ngSubmit", function DepartmentFieldComponent_Template_form_ngSubmit_2_listener() {
+        return ctx.onSubmit();
+      });
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](3, "div", 1)(4, "label", 2);
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](5, "Department");
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](6, "select", 3)(7, "option", 4);
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](8, "Select Department");
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](9, "option", 5);
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](10, "computer engneering");
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](11, "option", 6);
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](12, "electrical engneering");
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](13, "option", 7);
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](14, "mechenical engneering");
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](15, "option", 8);
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](16, "civil engneering");
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](17, DepartmentFieldComponent_option_17_Template, 2, 2, "option", 9);
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]()();
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](18, "button", 10);
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](19, "Submit");
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]()();
+    }
+    if (rf & 2) {
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("formGroup", ctx.registrationForm);
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](15);
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngForOf", ctx.departments);
+    }
+  },
+  dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_3__.NgForOf, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__.NgSelectOption, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ɵNgSelectMultipleOption"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__.SelectControlValueAccessor, _angular_forms__WEBPACK_IMPORTED_MODULE_2__.NgControlStatus, _angular_forms__WEBPACK_IMPORTED_MODULE_2__.NgControlStatusGroup, _angular_forms__WEBPACK_IMPORTED_MODULE_2__.FormGroupDirective, _angular_forms__WEBPACK_IMPORTED_MODULE_2__.FormControlName],
+  styles: ["/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsInNvdXJjZVJvb3QiOiIifQ== */"]
+});
+
+/***/ }),
+
+/***/ 9359:
+/*!**************************************************!*\
+  !*** ./src/app/dob-field/dob-field.component.ts ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   DobFieldComponent: () => (/* binding */ DobFieldComponent)
+/* harmony export */ });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 1699);
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ 8849);
+var _class;
+
+
+class DobFieldComponent {}
+_class = DobFieldComponent;
+_class.ɵfac = function DobFieldComponent_Factory(t) {
+  return new (t || _class)();
+};
+_class.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
+  type: _class,
+  selectors: [["app-dob-field"]],
+  decls: 8,
+  vars: 0,
+  consts: [["for", "dob"], ["type", "date", "id", "dob", "formControlName", "dob"]],
+  template: function DobFieldComponent_Template(rf, ctx) {
+    if (rf & 1) {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "p");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "dob-field works!");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div")(3, "label", 0);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](4, "Date of Birth:");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](5, "input", 1);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "button");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, "submit");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    }
+  },
+  dependencies: [_angular_forms__WEBPACK_IMPORTED_MODULE_1__.DefaultValueAccessor, _angular_forms__WEBPACK_IMPORTED_MODULE_1__.NgControlStatus, _angular_forms__WEBPACK_IMPORTED_MODULE_1__.FormControlName],
+  styles: ["/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsInNvdXJjZVJvb3QiOiIifQ== */"]
+});
+
+/***/ }),
+
+/***/ 1096:
+/*!******************************************************!*\
+  !*** ./src/app/email-field/email-field.component.ts ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   EmailFieldComponent: () => (/* binding */ EmailFieldComponent)
+/* harmony export */ });
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ 8849);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 1699);
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ 6575);
+var _class;
+
+
+
+
+function EmailFieldComponent_div_9_Template(rf, ctx) {
+  if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 7);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " Email is required. ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+  }
+}
+function EmailFieldComponent_div_10_Template(rf, ctx) {
+  if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 7);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " Invalid email format. ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+  }
+}
+class EmailFieldComponent {
+  constructor(fb) {
+    this.fb = fb;
+    this.submitted = false;
+  }
+  ngOnInit() {
+    this.registrationForm = this.fb.group({
+      // Other form fields
+      email: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__.Validators.required, _angular_forms__WEBPACK_IMPORTED_MODULE_1__.Validators.email]]
+    });
+  }
+  onSubmit() {
+    this.submitted = true;
+    if (this.registrationForm.invalid) {
+      return;
+    }
+    // Form is valid, continue with submission
+    console.log('Form submitted:', this.registrationForm.value);
+  }
+}
+_class = EmailFieldComponent;
+_class.ɵfac = function EmailFieldComponent_Factory(t) {
+  return new (t || _class)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_forms__WEBPACK_IMPORTED_MODULE_1__.FormBuilder));
+};
+_class.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
+  type: _class,
+  selectors: [["app-email-field"]],
+  decls: 13,
+  vars: 5,
+  consts: [[3, "formGroup", "ngSubmit"], [1, "form-group"], ["for", "email"], [1, "required"], ["type", "email", "id", "email", "name", "email", "formControlName", "email", 1, "form-control"], ["class", "text-danger", 4, "ngIf", "ngIfHasError"], ["type", "submit", 1, "btn", "btn-primary"], [1, "text-danger"]],
+  template: function EmailFieldComponent_Template(rf, ctx) {
+    if (rf & 1) {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "p");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "email-field works!");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "form", 0);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngSubmit", function EmailFieldComponent_Template_form_ngSubmit_2_listener() {
+        return ctx.onSubmit();
+      });
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "div", 1)(4, "label", 2);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, "Email");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "span", 3);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, "*");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]()();
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](8, "input", 4);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](9, EmailFieldComponent_div_9_Template, 2, 0, "div", 5);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](10, EmailFieldComponent_div_10_Template, 2, 0, "div", 5);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "button", 6);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](12, "Submit");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]()();
+    }
+    if (rf & 2) {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("formGroup", ctx.registrationForm);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](7);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.submitted && ctx.registrationForm.get("email"))("ngIfHasError", "required");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.submitted && ctx.registrationForm.get("email"))("ngIfHasError", "email");
+    }
+  },
+  dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_2__.NgIf, _angular_forms__WEBPACK_IMPORTED_MODULE_1__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__.DefaultValueAccessor, _angular_forms__WEBPACK_IMPORTED_MODULE_1__.NgControlStatus, _angular_forms__WEBPACK_IMPORTED_MODULE_1__.NgControlStatusGroup, _angular_forms__WEBPACK_IMPORTED_MODULE_1__.FormGroupDirective, _angular_forms__WEBPACK_IMPORTED_MODULE_1__.FormControlName],
+  styles: ["/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsInNvdXJjZVJvb3QiOiIifQ== */"]
+});
+
+/***/ }),
+
+/***/ 4920:
+/*!**************************************************************!*\
+  !*** ./src/app/first-namefield/first-namefield.component.ts ***!
+  \**************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   FirstNamefieldComponent: () => (/* binding */ FirstNamefieldComponent)
+/* harmony export */ });
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ 8849);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 1699);
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ 6575);
+var _class;
+
+
+
+
+function FirstNamefieldComponent_div_9_Template(rf, ctx) {
+  if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 7);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " First Name is required. ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+  }
+}
+class FirstNamefieldComponent {
+  constructor(fb) {
+    this.fb = fb;
+    this.submitted = false;
+  }
+  ngOnInit() {
+    this.registrationForm = this.fb.group({
+      firstName: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__.Validators.required]
+      // Add other form fields here with their respective validators
+    });
+  }
+
+  onSubmit() {
+    this.submitted = true;
+    if (this.registrationForm.invalid) {
+      return;
+    }
+    console.log('Form submitted:', this.registrationForm.value);
+  }
+}
+_class = FirstNamefieldComponent;
+_class.ɵfac = function FirstNamefieldComponent_Factory(t) {
+  return new (t || _class)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_forms__WEBPACK_IMPORTED_MODULE_1__.FormBuilder));
+};
+_class.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
+  type: _class,
+  selectors: [["app-first-namefield"]],
+  decls: 12,
+  vars: 2,
+  consts: [[3, "formGroup", "ngSubmit"], [1, "form-group"], ["for", "firstName"], [1, "required"], ["type", "text", "id", "firstName", "name", "firstName", "formControlName", "firstName", 1, "form-control"], ["class", "text-danger", 4, "ngIf"], ["type", "submit", 1, "btn", "btn-primary"], [1, "text-danger"]],
+  template: function FirstNamefieldComponent_Template(rf, ctx) {
+    if (rf & 1) {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "p");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "first-namefield works!");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "form", 0);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngSubmit", function FirstNamefieldComponent_Template_form_ngSubmit_2_listener() {
+        return ctx.onSubmit();
+      });
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "div", 1)(4, "label", 2);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, "First Name");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "span", 3);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, "*");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]()();
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](8, "input", 4);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](9, FirstNamefieldComponent_div_9_Template, 2, 0, "div", 5);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "button", 6);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](11, "Submit");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]()();
+    }
+    if (rf & 2) {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("formGroup", ctx.registrationForm);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](7);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.submitted && ctx.registrationForm.get("firstName").hasError("required"));
+    }
+  },
+  dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_2__.NgIf, _angular_forms__WEBPACK_IMPORTED_MODULE_1__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__.DefaultValueAccessor, _angular_forms__WEBPACK_IMPORTED_MODULE_1__.NgControlStatus, _angular_forms__WEBPACK_IMPORTED_MODULE_1__.NgControlStatusGroup, _angular_forms__WEBPACK_IMPORTED_MODULE_1__.FormGroupDirective, _angular_forms__WEBPACK_IMPORTED_MODULE_1__.FormControlName],
+  styles: ["/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsInNvdXJjZVJvb3QiOiIifQ== */"]
+});
+
+/***/ }),
+
+/***/ 4085:
+/*!********************************************************!*\
+  !*** ./src/app/gender-field/gender-field.component.ts ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   GenderFieldComponent: () => (/* binding */ GenderFieldComponent)
+/* harmony export */ });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 1699);
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ 6575);
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ 8849);
+var _class;
+
+
+
+function GenderFieldComponent_option_5_Template(rf, ctx) {
+  if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "option", 3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+  }
+  if (rf & 2) {
+    const salutation_r1 = ctx.$implicit;
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("value", salutation_r1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](salutation_r1);
+  }
+}
+class GenderFieldComponent {
+  constructor() {
+    this.salutations1 = ['Mr', 'Mrs', 'Ms', 'Dr'];
+  }
+  ngOnInit() {
+    throw new Error('Method not implemented.');
+  }
+  getGender() {
+    if (this.selectedSalutation1 === 'Mr' || this.selectedSalutation1 === 'Dr') {
+      return 'Male';
+    } else if (this.selectedSalutation1 === 'Mrs' || this.selectedSalutation1 === 'Ms') {
+      return 'Female';
+    } else {
+      return 'Gender not specified';
+    }
+  }
+}
+_class = GenderFieldComponent;
+_class.ɵfac = function GenderFieldComponent_Factory(t) {
+  return new (t || _class)();
+};
+_class.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
+  type: _class,
+  selectors: [["app-gender-field"]],
+  decls: 9,
+  vars: 3,
+  consts: [["name", "salutation", 3, "ngModel", "ngModelChange"], [3, "value", 4, "ngFor", "ngForOf"], ["type", "text", "disabled", "", 3, "value"], [3, "value"]],
+  template: function GenderFieldComponent_Template(rf, ctx) {
+    if (rf & 1) {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "p");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "gender-field works!");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "h2");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3, "Select a Salutation:");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "select", 0);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngModelChange", function GenderFieldComponent_Template_select_ngModelChange_4_listener($event) {
+        return ctx.selectedSalutation1 = $event;
+      });
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](5, GenderFieldComponent_option_5_Template, 2, 2, "option", 1);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "h2");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, "select a Gender:");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](8, "input", 2);
+    }
+    if (rf & 2) {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](4);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngModel", ctx.selectedSalutation1);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.salutations1);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("value", ctx.getGender());
+    }
+  },
+  dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_1__.NgForOf, _angular_forms__WEBPACK_IMPORTED_MODULE_2__.NgSelectOption, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ɵNgSelectMultipleOption"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__.SelectControlValueAccessor, _angular_forms__WEBPACK_IMPORTED_MODULE_2__.NgControlStatus, _angular_forms__WEBPACK_IMPORTED_MODULE_2__.NgModel],
+  styles: ["/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsInNvdXJjZVJvb3QiOiIifQ== */"]
+});
+
+/***/ }),
+
+/***/ 6564:
+/*!************************************************************!*\
+  !*** ./src/app/language-field/language-field.component.ts ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   LanguageFieldComponent: () => (/* binding */ LanguageFieldComponent)
+/* harmony export */ });
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ 8849);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 1699);
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ 6575);
+var _class;
+
+
+
+
+function LanguageFieldComponent_option_56_Template(rf, ctx) {
+  if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "option", 29);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+  }
+  if (rf & 2) {
+    const language_r1 = ctx.$implicit;
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("value", language_r1.id);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](language_r1.name);
+  }
+}
+class LanguageFieldComponent {
+  constructor(fb) {
+    this.fb = fb;
+    // Initialize languageOptions with data retrieved from your Languages table
+    this.languageOptions = [{
+      id: 1,
+      name: 'English'
+    }, {
+      id: 2,
+      name: 'Spanish'
+    }, {
+      id: 3,
+      name: 'French'
+    }
+    // Add more languages as needed
+    ];
+
+    this.registrationForm = this.fb.group({
+      // Other form controls
+      languages: [[], [_angular_forms__WEBPACK_IMPORTED_MODULE_1__.Validators.required, this.validateLanguages]]
+    });
+  }
+  // Custom validator to ensure at least one language is selected
+  validateLanguages(control) {
+    const selectedLanguages = control.value;
+    if (selectedLanguages && selectedLanguages.length > 0) {
+      return null; // Valid
+    } else {
+      return {
+        required: true
+      }; // Invalid
+    }
+  }
+}
+_class = LanguageFieldComponent;
+_class.ɵfac = function LanguageFieldComponent_Factory(t) {
+  return new (t || _class)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_forms__WEBPACK_IMPORTED_MODULE_1__.FormBuilder));
+};
+_class.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
+  type: _class,
+  selectors: [["app-language-field"]],
+  decls: 57,
+  vars: 1,
+  consts: [[1, "form-group"], ["for", "languages"], [1, "required"], ["id", "languages", "name", "languages", "formControlName", "languages", "multiple", "", 1, "form-control"], ["value", "Gujarati"], ["value", "English"], ["value", "French"], ["value", "German"], ["value", "Russian"], ["value", "Spanish"], ["value", "Portuguese"], ["value", "Arabic"], ["value", "Hindi"], ["value", "Japanese"], ["value", "Bengali"], ["value", "Italian"], ["value", "Korean"], ["value", "Greek"], ["value", "Hungarian"], ["value", "Dutch"], ["value", "Indonesian"], ["value", "Czech"], ["value", "Danish"], ["value", "Finnish"], ["value", "Turkish"], ["value", "Urdu"], ["value", "Bulgarian"], ["value", "Hebrew"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"]],
+  template: function LanguageFieldComponent_Template(rf, ctx) {
+    if (rf & 1) {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "p");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "language-field works!");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 0)(3, "label", 1);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](4, "Languages");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "span", 2);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](6, "*");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]()();
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "select", 3)(8, "option", 4);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](9, "Gujarati");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "option", 5);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](11, "English");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "option", 6);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](13, "French");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "option", 7);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](15, "German");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](16, "option", 8);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](17, "Russian");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](18, "option", 9);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](19, "Spanish");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](20, "option", 10);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](21, "Portuguese");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](22, "option", 11);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](23, "Arabic");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](24, "option", 12);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](25, "Hindi");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](26, "option", 13);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](27, "Japanese");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](28, "option", 14);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](29, "Bengali");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](30, "option", 15);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](31, "Italian");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](32, "option", 16);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](33, "Korean");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](34, "option", 17);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](35, "Greek");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](36, "option", 18);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](37, "Hungarian");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](38, "option", 19);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](39, "Dutch");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](40, "option", 20);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](41, "Indonesian");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](42, "option", 21);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](43, "Czech");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](44, "option", 22);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](45, "Danish");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](46, "option", 23);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](47, "Finnish");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](48, "option", 24);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](49, "Turkish");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](50, "option", 25);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](51, "Urdu");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](52, "option", 26);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](53, "Bulgarian");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](54, "option", 27);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](55, "Hebrew");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](56, LanguageFieldComponent_option_56_Template, 2, 2, "option", 28);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]()();
+    }
+    if (rf & 2) {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](56);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.languageOptions);
+    }
+  },
+  dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_2__.NgForOf, _angular_forms__WEBPACK_IMPORTED_MODULE_1__.NgSelectOption, _angular_forms__WEBPACK_IMPORTED_MODULE_1__["ɵNgSelectMultipleOption"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__.SelectMultipleControlValueAccessor, _angular_forms__WEBPACK_IMPORTED_MODULE_1__.NgControlStatus, _angular_forms__WEBPACK_IMPORTED_MODULE_1__.FormControlName],
+  styles: ["/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsInNvdXJjZVJvb3QiOiIifQ== */"]
+});
+
+/***/ }),
+
+/***/ 1863:
+/*!************************************************************!*\
+  !*** ./src/app/last-namefield/last-namefield.component.ts ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   LastNamefieldComponent: () => (/* binding */ LastNamefieldComponent)
+/* harmony export */ });
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ 8849);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 1699);
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ 6575);
+var _class;
+
+
+
+
+function LastNamefieldComponent_div_9_Template(rf, ctx) {
+  if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 7);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " Last Name is required. ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+  }
+}
+class LastNamefieldComponent {
+  constructor(fb) {
+    this.fb = fb;
+    this.submitted = false;
+  }
+  ngOnInit() {
+    this.registrationForm = this.fb.group({
+      lastName: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__.Validators.required]
+      // Add other form fields here with their respective validators
+    });
+  }
+
+  onSubmit() {
+    this.submitted = true;
+    if (this.registrationForm.invalid) {
+      return;
+    }
+    // Form is valid, continue with submission
+    console.log('Form submitted:', this.registrationForm.value);
+  }
+}
+_class = LastNamefieldComponent;
+_class.ɵfac = function LastNamefieldComponent_Factory(t) {
+  return new (t || _class)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_forms__WEBPACK_IMPORTED_MODULE_1__.FormBuilder));
+};
+_class.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
+  type: _class,
+  selectors: [["app-last-namefield"]],
+  decls: 12,
+  vars: 3,
+  consts: [[3, "formGroup", "ngSubmit"], [1, "form-group"], ["for", "lastName"], [1, "required"], ["type", "text", "id", "lastName", "name", "lastName", "formControlName", "lastName", 1, "form-control"], ["class", "text-danger", 4, "ngIf", "ngIfHasError"], ["type", "submit", 1, "btn", "btn-primary"], [1, "text-danger"]],
+  template: function LastNamefieldComponent_Template(rf, ctx) {
+    if (rf & 1) {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "p");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "last-namefield works!");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "form", 0);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngSubmit", function LastNamefieldComponent_Template_form_ngSubmit_2_listener() {
+        return ctx.onSubmit();
+      });
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "div", 1)(4, "label", 2);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, "Last Name");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "span", 3);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, "*");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]()();
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](8, "input", 4);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](9, LastNamefieldComponent_div_9_Template, 2, 0, "div", 5);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "button", 6);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](11, "Submit");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]()();
+    }
+    if (rf & 2) {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("formGroup", ctx.registrationForm);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](7);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.submitted && ctx.registrationForm.get("lastName"))("ngIfHasError", "required");
+    }
+  },
+  dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_2__.NgIf, _angular_forms__WEBPACK_IMPORTED_MODULE_1__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__.DefaultValueAccessor, _angular_forms__WEBPACK_IMPORTED_MODULE_1__.NgControlStatus, _angular_forms__WEBPACK_IMPORTED_MODULE_1__.NgControlStatusGroup, _angular_forms__WEBPACK_IMPORTED_MODULE_1__.FormGroupDirective, _angular_forms__WEBPACK_IMPORTED_MODULE_1__.FormControlName],
+  styles: ["/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsInNvdXJjZVJvb3QiOiIifQ== */"]
+});
+
+/***/ }),
+
+/***/ 8744:
+/*!********************************************************************!*\
+  !*** ./src/app/moblienumber-field/moblienumber-field.component.ts ***!
+  \********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   MoblienumberFieldComponent: () => (/* binding */ MoblienumberFieldComponent)
+/* harmony export */ });
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ 8849);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 1699);
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ 6575);
+var _class;
+
+
+
+
+function MoblienumberFieldComponent_div_9_Template(rf, ctx) {
+  if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 7);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " Mobile Number is required. ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+  }
+}
+function MoblienumberFieldComponent_div_10_Template(rf, ctx) {
+  if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 7);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " Invalid mobile number format. ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+  }
+}
+class MoblienumberFieldComponent {
+  ngOnInit() {
+    throw new Error('Method not implemented.');
+  }
+  constructor(fb) {
+    this.fb = fb;
+    this.submitted = false;
+  }
+  ngOnInit1() {
+    this.registrationForm = this.fb.group({
+      // Other form fields
+      mobileNumber: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__.Validators.required, _angular_forms__WEBPACK_IMPORTED_MODULE_1__.Validators.pattern('^[0-9]*$') // Accepts only digits
+      ]]
+    });
+  }
+
+  onSubmit() {
+    this.submitted = true;
+    if (this.registrationForm.invalid) {
+      return;
+    }
+    // Form is valid, continue with submission
+    console.log('Form submitted:', this.registrationForm.value);
+  }
+}
+_class = MoblienumberFieldComponent;
+_class.ɵfac = function MoblienumberFieldComponent_Factory(t) {
+  return new (t || _class)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_forms__WEBPACK_IMPORTED_MODULE_1__.FormBuilder));
+};
+_class.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
+  type: _class,
+  selectors: [["app-moblienumber-field"]],
+  decls: 13,
+  vars: 5,
+  consts: [[3, "formGroup", "ngSubmit"], [1, "form-group"], ["for", "mobileNumber"], [1, "required"], ["type", "text", "id", "mobileNumber", "name", "mobileNumber", "formControlName", "mobileNumber", 1, "form-control"], ["class", "text-danger", 4, "ngIf", "ngIfHasError"], ["type", "submit", 1, "btn", "btn-primary"], [1, "text-danger"]],
+  template: function MoblienumberFieldComponent_Template(rf, ctx) {
+    if (rf & 1) {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "p");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "moblienumber-field works!");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "form", 0);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngSubmit", function MoblienumberFieldComponent_Template_form_ngSubmit_2_listener() {
+        return ctx.onSubmit();
+      });
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "div", 1)(4, "label", 2);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, "Mobile Number");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "span", 3);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, "*");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]()();
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](8, "input", 4);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](9, MoblienumberFieldComponent_div_9_Template, 2, 0, "div", 5);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](10, MoblienumberFieldComponent_div_10_Template, 2, 0, "div", 5);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "button", 6);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](12, "Submit");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]()();
+    }
+    if (rf & 2) {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("formGroup", ctx.registrationForm);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](7);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.submitted && ctx.registrationForm.get("mobileNumber"))("ngIfHasError", "required");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.submitted && ctx.registrationForm.get("mobileNumber"))("ngIfHasError", "pattern");
+    }
+  },
+  dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_2__.NgIf, _angular_forms__WEBPACK_IMPORTED_MODULE_1__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__.DefaultValueAccessor, _angular_forms__WEBPACK_IMPORTED_MODULE_1__.NgControlStatus, _angular_forms__WEBPACK_IMPORTED_MODULE_1__.NgControlStatusGroup, _angular_forms__WEBPACK_IMPORTED_MODULE_1__.FormGroupDirective, _angular_forms__WEBPACK_IMPORTED_MODULE_1__.FormControlName],
+  styles: ["/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsInNvdXJjZVJvb3QiOiIifQ== */"]
+});
+
+/***/ }),
+
+/***/ 2429:
+/*!**********************************************************************!*\
+  !*** ./src/app/registraction-entry/registraction-entry.component.ts ***!
+  \**********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   RegistractionEntryComponent: () => (/* binding */ RegistractionEntryComponent),
+/* harmony export */   Registration: () => (/* binding */ Registration)
+/* harmony export */ });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 1699);
+var _class;
+
+class Registration {
+  constructor(id, firstName, lastName, email, departmentId, languageId) {
+    this.id = id;
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.email = email;
+    this.departmentId = departmentId;
+    this.languageId = languageId;
+  }
+}
+class RegistractionEntryComponent {}
+_class = RegistractionEntryComponent;
+_class.ɵfac = function RegistractionEntryComponent_Factory(t) {
+  return new (t || _class)();
+};
+_class.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
+  type: _class,
+  selectors: [["app-registraction-entry"]],
+  decls: 2,
+  vars: 0,
+  template: function RegistractionEntryComponent_Template(rf, ctx) {
+    if (rf & 1) {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "p");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "registraction-entry works!");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    }
+  },
+  styles: ["/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsInNvdXJjZVJvb3QiOiIifQ== */"]
+});
+
+/***/ }),
+
+/***/ 1260:
+/*!********************************************************************!*\
+  !*** ./src/app/registraction-grid/registraction-grid.component.ts ***!
+  \********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   RegistractionGridComponent: () => (/* binding */ RegistractionGridComponent)
+/* harmony export */ });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 1699);
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ 6575);
+/* harmony import */ var primeng_table__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! primeng/table */ 6192);
+/* harmony import */ var primeng_api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! primeng/api */ 8026);
+var _class;
+
+
+
+
+function RegistractionGridComponent_ng_template_3_th_1_Template(rf, ctx) {
+  if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "th", 4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "p-sortIcon", 5);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+  }
+  if (rf & 2) {
+    const col_r4 = ctx.$implicit;
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("pSortableColumn", col_r4.field);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", col_r4.header, " ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("field", col_r4.field);
+  }
+}
+function RegistractionGridComponent_ng_template_3_Template(rf, ctx) {
+  if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "tr");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, RegistractionGridComponent_ng_template_3_th_1_Template, 3, 3, "th", 3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+  }
+  if (rf & 2) {
+    const columns_r2 = ctx.$implicit;
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", columns_r2);
+  }
+}
+function RegistractionGridComponent_ng_template_4_td_1_Template(rf, ctx) {
+  if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "td");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+  }
+  if (rf & 2) {
+    const col_r7 = ctx.$implicit;
+    const rowData_r5 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]().$implicit;
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", rowData_r5[col_r7.field], " ");
+  }
+}
+function RegistractionGridComponent_ng_template_4_Template(rf, ctx) {
+  if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "tr");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, RegistractionGridComponent_ng_template_4_td_1_Template, 2, 1, "td", 6);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+  }
+  if (rf & 2) {
+    const ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx_r1.cols);
+  }
+}
+class RegistractionGridComponent {
+  constructor() {
+    this.registrations = [{
+      id: 1,
+      Firstname: 'meet',
+      LastName: 'jani',
+      email: 'meetjani801@gmail.com',
+      Moblie: 6354299736,
+      department: 'computer engneering',
+      gender: 'male',
+      salary: 21000,
+      dob: '15/2/2006',
+      age: 17
+    }, {
+      id: 2,
+      Firstname: 'raju',
+      LastName: 'pandya',
+      email: 'xyz@example.com',
+      Moblie: 2156784123,
+      department: 'computer engneering',
+      gender: 'male',
+      salary: 45000,
+      dob: '10/2/2006',
+      age: 19
+    }
+    // Add more data
+    ];
+    // Define columns
+    this.cols = [{
+      field: 'id',
+      header: 'ID'
+    }, {
+      field: 'Firstname',
+      header: 'FirstName'
+    }, {
+      field: 'LastName',
+      header: 'LastName'
+    }, {
+      field: 'email',
+      header: 'Email'
+    }, {
+      field: 'Moblie',
+      header: 'Moblie'
+    }, {
+      field: 'department',
+      header: 'department'
+    }, {
+      field: 'gender',
+      header: 'gender'
+    }, {
+      field: 'salary',
+      header: 'salary'
+    }, {
+      field: 'dob',
+      header: 'dob'
+    }, {
+      field: 'age',
+      header: 'age'
+    }];
+  }
+}
+_class = RegistractionGridComponent;
+_class.ɵfac = function RegistractionGridComponent_Factory(t) {
+  return new (t || _class)();
+};
+_class.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
+  type: _class,
+  selectors: [["app-registraction-grid"]],
+  decls: 5,
+  vars: 4,
+  consts: [[3, "value", "paginator", "rows", "columns"], ["pTemplate", "header"], ["pTemplate", "body"], [3, "pSortableColumn", 4, "ngFor", "ngForOf"], [3, "pSortableColumn"], [3, "field"], [4, "ngFor", "ngForOf"]],
+  template: function RegistractionGridComponent_Template(rf, ctx) {
+    if (rf & 1) {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "p");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "registraction-grid works!");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "p-table", 0);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](3, RegistractionGridComponent_ng_template_3_Template, 2, 1, "ng-template", 1);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](4, RegistractionGridComponent_ng_template_4_Template, 2, 1, "ng-template", 2);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    }
+    if (rf & 2) {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("value", ctx.registrations)("paginator", true)("rows", 10)("columns", ctx.cols);
+    }
+  },
+  dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_1__.NgForOf, primeng_table__WEBPACK_IMPORTED_MODULE_2__.Table, primeng_api__WEBPACK_IMPORTED_MODULE_3__.PrimeTemplate, primeng_table__WEBPACK_IMPORTED_MODULE_2__.SortableColumn, primeng_table__WEBPACK_IMPORTED_MODULE_2__.SortIcon],
+  styles: ["/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsInNvdXJjZVJvb3QiOiIifQ== */"]
+});
+
+/***/ }),
+
+/***/ 5012:
+/*!**************************************************************************************!*\
+  !*** ./src/app/registraction-validate-form/registraction-validate-form.component.ts ***!
+  \**************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   RegistractionValidateFormComponent: () => (/* binding */ RegistractionValidateFormComponent)
+/* harmony export */ });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 1699);
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ 6575);
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ 8849);
+var _class;
+
+
+
+function RegistractionValidateFormComponent_div_9_div_1_Template(rf, ctx) {
+  if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "Name is required.");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+  }
+}
+function RegistractionValidateFormComponent_div_9_div_2_Template(rf, ctx) {
+  if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "Name must be at least 2 characters long.");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+  }
+}
+function RegistractionValidateFormComponent_div_9_Template(rf, ctx) {
+  if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 8);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, RegistractionValidateFormComponent_div_9_div_1_Template, 2, 0, "div", 9);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](2, RegistractionValidateFormComponent_div_9_div_2_Template, 2, 0, "div", 9);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+  }
+  if (rf & 2) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+    const _r1 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](8);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", _r1.errors == null ? null : _r1.errors["required"]);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", _r1.errors == null ? null : _r1.errors["minlength"]);
+  }
+}
+class RegistractionValidateFormComponent {
+  constructor() {
+    this.user = {
+      name: '',
+      email: ''
+    };
+  }
+  onSubmit() {
+    // Handle form submission here (e.g., send data to the server)
+    console.log('Form submitted:', this.user);
+  }
+}
+_class = RegistractionValidateFormComponent;
+_class.ɵfac = function RegistractionValidateFormComponent_Factory(t) {
+  return new (t || _class)();
+};
+_class.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
+  type: _class,
+  selectors: [["app-registraction-validate-form"]],
+  decls: 12,
+  vars: 3,
+  consts: [[3, "ngSubmit"], ["registrationForm", "ngForm"], [1, "form-group"], ["for", "name"], ["type", "text", "id", "name", "name", "name", "required", "", "minlength", "2", 3, "ngModel", "ngModelChange"], ["nameInput", "ngModel"], ["class", "alert alert-danger", 4, "ngIf"], ["type", "submit", 3, "disabled"], [1, "alert", "alert-danger"], [4, "ngIf"]],
+  template: function RegistractionValidateFormComponent_Template(rf, ctx) {
+    if (rf & 1) {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "p");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "registraction-validate-form works!");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "form", 0, 1);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngSubmit", function RegistractionValidateFormComponent_Template_form_ngSubmit_2_listener() {
+        return ctx.onSubmit();
+      });
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "div", 2)(5, "label", 3);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](6, "Name:");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "input", 4, 5);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngModelChange", function RegistractionValidateFormComponent_Template_input_ngModelChange_7_listener($event) {
+        return ctx.user.name = $event;
+      });
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](9, RegistractionValidateFormComponent_div_9_Template, 3, 2, "div", 6);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "button", 7);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](11, "Submit");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]()();
+    }
+    if (rf & 2) {
+      const _r0 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](3);
+      const _r1 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](8);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](7);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngModel", ctx.user.name);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", _r1.invalid && _r1.touched);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("disabled", _r0.invalid);
+    }
+  },
+  dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_1__.NgIf, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__.DefaultValueAccessor, _angular_forms__WEBPACK_IMPORTED_MODULE_2__.NgControlStatus, _angular_forms__WEBPACK_IMPORTED_MODULE_2__.NgControlStatusGroup, _angular_forms__WEBPACK_IMPORTED_MODULE_2__.RequiredValidator, _angular_forms__WEBPACK_IMPORTED_MODULE_2__.MinLengthValidator, _angular_forms__WEBPACK_IMPORTED_MODULE_2__.NgModel, _angular_forms__WEBPACK_IMPORTED_MODULE_2__.NgForm],
+  styles: [".error[_ngcontent-%COMP%] {\n  color: red;\n  font-size: 14px;\n  margin-top: 5px;\n}\n.alert-danger[_ngcontent-%COMP%] {\n  color: red;\n  font-size: 14px;\n  margin-top: 5px;\n}\n\n\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9hcHAvcmVnaXN0cmFjdGlvbi12YWxpZGF0ZS1mb3JtL3JlZ2lzdHJhY3Rpb24tdmFsaWRhdGUtZm9ybS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsVUFBVTtFQUNWLGVBQWU7RUFDZixlQUFlO0FBQ2pCO0FBQ0E7RUFDRSxVQUFVO0VBQ1YsZUFBZTtFQUNmLGVBQWU7QUFDakIiLCJzb3VyY2VzQ29udGVudCI6WyIuZXJyb3Ige1xyXG4gIGNvbG9yOiByZWQ7XHJcbiAgZm9udC1zaXplOiAxNHB4O1xyXG4gIG1hcmdpbi10b3A6IDVweDtcclxufVxyXG4uYWxlcnQtZGFuZ2VyIHtcclxuICBjb2xvcjogcmVkO1xyXG4gIGZvbnQtc2l6ZTogMTRweDtcclxuICBtYXJnaW4tdG9wOiA1cHg7XHJcbn1cclxuXHJcbiJdLCJzb3VyY2VSb290IjoiIn0= */"]
+});
+
+/***/ }),
+
+/***/ 9625:
+/*!******************************************************************************!*\
+  !*** ./src/app/registration-management/registration-management.component.ts ***!
+  \******************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   RegistrationManagementComponent: () => (/* binding */ RegistrationManagementComponent)
+/* harmony export */ });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 1699);
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ 6575);
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ 8849);
+var _class;
+
+
+
+function RegistrationManagementComponent_tr_14_Template(rf, ctx) {
+  if (rf & 1) {
+    const _r4 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "tr")(1, "td");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "td");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "td")(6, "button", 7);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function RegistrationManagementComponent_tr_14_Template_button_click_6_listener() {
+      const restoredCtx = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r4);
+      const i_r2 = restoredCtx.index;
+      const ctx_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+      return _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵresetView"](ctx_r3.editRegistration(i_r2));
+    });
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, "Edit");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "button", 7);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function RegistrationManagementComponent_tr_14_Template_button_click_8_listener() {
+      const restoredCtx = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r4);
+      const i_r2 = restoredCtx.index;
+      const ctx_r5 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+      return _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵresetView"](ctx_r5.deleteRegistration(i_r2));
+    });
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](9, "Delete");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]()()();
+  }
+  if (rf & 2) {
+    const registration_r1 = ctx.$implicit;
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](registration_r1.name);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](registration_r1.email);
+  }
+}
+class RegistrationManagementComponent {
+  constructor() {
+    this.registrations = [{
+      name: 'John Doe',
+      email: 'johndoe@example.com'
+    }
+    // Add more initial data here
+    ];
+
+    this.newRegistration = {
+      name: '',
+      email: ''
+    };
+    this.editIndex = -1;
+  }
+  editRegistration(index) {
+    this.newRegistration = {
+      ...this.registrations[index]
+    };
+    this.editIndex = index;
+  }
+  saveRegistration() {
+    if (this.editIndex === -1) {
+      this.registrations.push(this.newRegistration);
+    } else {
+      this.registrations[this.editIndex] = {
+        ...this.newRegistration
+      };
+      this.editIndex = -1;
+    }
+    this.newRegistration = {
+      name: '',
+      email: ''
+    };
+  }
+  deleteRegistration(index) {
+    if (confirm('Are you sure you want to delete this record?')) {
+      this.registrations.splice(index, 1);
+    }
+  }
+  cancelEdit() {
+    this.editIndex = -1;
+    this.newRegistration = {
+      name: '',
+      email: ''
+    };
+  }
+}
+_class = RegistrationManagementComponent;
+_class.ɵfac = function RegistrationManagementComponent_Factory(t) {
+  return new (t || _class)();
+};
+_class.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
+  type: _class,
+  selectors: [["app-registration-management"]],
+  decls: 22,
+  vars: 3,
+  consts: [["border", "1"], [4, "ngFor", "ngForOf"], [3, "submit"], ["type", "text", "placeholder", "Name", 3, "ngModel", "ngModelChange"], ["type", "email", "placeholder", "Email", 3, "ngModel", "ngModelChange"], ["type", "submit"], ["type", "button", 3, "click"], [3, "click"]],
+  template: function RegistrationManagementComponent_Template(rf, ctx) {
+    if (rf & 1) {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "p");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "registration-management works!");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "h1");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3, "Registration Management");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "table", 0)(5, "thead")(6, "tr")(7, "th");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](8, "Name");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "th");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](10, "Email");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "th");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](12, "Action");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]()()();
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](13, "tbody");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](14, RegistrationManagementComponent_tr_14_Template, 10, 2, "tr", 1);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]()();
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](15, "form", 2);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("submit", function RegistrationManagementComponent_Template_form_submit_15_listener() {
+        return ctx.saveRegistration();
+      });
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](16, "input", 3);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngModelChange", function RegistrationManagementComponent_Template_input_ngModelChange_16_listener($event) {
+        return ctx.newRegistration.name = $event;
+      });
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "input", 4);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngModelChange", function RegistrationManagementComponent_Template_input_ngModelChange_17_listener($event) {
+        return ctx.newRegistration.email = $event;
+      });
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](18, "button", 5);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](19, "Save");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](20, "button", 6);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function RegistrationManagementComponent_Template_button_click_20_listener() {
+        return ctx.cancelEdit();
+      });
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](21, "Cancel");
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]()();
+    }
+    if (rf & 2) {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](14);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.registrations);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngModel", ctx.newRegistration.name);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngModel", ctx.newRegistration.email);
+    }
+  },
+  dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_1__.NgForOf, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ɵNgNoValidate"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__.DefaultValueAccessor, _angular_forms__WEBPACK_IMPORTED_MODULE_2__.NgControlStatus, _angular_forms__WEBPACK_IMPORTED_MODULE_2__.NgControlStatusGroup, _angular_forms__WEBPACK_IMPORTED_MODULE_2__.NgModel, _angular_forms__WEBPACK_IMPORTED_MODULE_2__.NgForm],
+  styles: ["/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsInNvdXJjZVJvb3QiOiIifQ== */"]
+});
+
+/***/ }),
+
+/***/ 3509:
+/*!********************************************************!*\
+  !*** ./src/app/salary-field/salary-field.component.ts ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   SalaryFieldComponent: () => (/* binding */ SalaryFieldComponent)
+/* harmony export */ });
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/forms */ 8849);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ 1699);
+var _class;
+
+
+
+class SalaryFieldComponent {
+  constructor(fb) {
+    this.fb = fb;
+    this.registrationForm = this.fb.group({
+      // Other form controls
+      salary: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_0__.Validators.required, _angular_forms__WEBPACK_IMPORTED_MODULE_0__.Validators.pattern(/^\d+$/)]]
+    });
+  }
+}
+_class = SalaryFieldComponent;
+_class.ɵfac = function SalaryFieldComponent_Factory(t) {
+  return new (t || _class)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_forms__WEBPACK_IMPORTED_MODULE_0__.FormBuilder));
+};
+_class.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({
+  type: _class,
+  selectors: [["app-salary-field"]],
+  decls: 10,
+  vars: 0,
+  consts: [[1, "form-group"], ["for", "salary"], [1, "required"], ["type", "text", "id", "salary", "name", "salary", "formControlName", "salary", 1, "form-control"]],
+  template: function SalaryFieldComponent_Template(rf, ctx) {
+    if (rf & 1) {
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "p");
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1, "salary-field works!");
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "div", 0)(3, "label", 1);
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](4, "Salary");
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](5, "span", 2);
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](6, "*");
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]()();
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](7, "input", 3);
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](8, "button");
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](9, "submit");
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    }
+  },
+  dependencies: [_angular_forms__WEBPACK_IMPORTED_MODULE_0__.DefaultValueAccessor, _angular_forms__WEBPACK_IMPORTED_MODULE_0__.NgControlStatus, _angular_forms__WEBPACK_IMPORTED_MODULE_0__.FormControlName],
+  styles: ["/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsInNvdXJjZVJvb3QiOiIifQ== */"]
+});
+
+/***/ }),
+
+/***/ 8672:
+/*!******************************************************!*\
+  !*** ./src/app/studentlist/studentlist.component.ts ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   StudentlistComponent: () => (/* binding */ StudentlistComponent)
+/* harmony export */ });
+/* harmony import */ var _student_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./student.json */ 3505);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ 1699);
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ 6575);
+var _class;
+
+
+
+function StudentlistComponent_tr_20_Template(rf, ctx) {
+  if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "tr")(1, "td");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](3, "td");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](5, "td");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](6);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](7, "td");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](8);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](9, "td");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](10);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](11, "td");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](12);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](13, "td");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+  }
+  if (rf & 2) {
+    const student_r1 = ctx.$implicit;
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](student_r1.id);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](student_r1.name);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](student_r1.email);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](student_r1.gender);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](student_r1.dept);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](student_r1.language);
+  }
+}
+class StudentlistComponent {
+  constructor() {
+    this.students = _student_json__WEBPACK_IMPORTED_MODULE_0__;
+  }
+  ngOnInit() {
+    throw new Error('Method not implemented.');
+  }
+}
+_class = StudentlistComponent;
+_class.ɵfac = function StudentlistComponent_Factory(t) {
+  return new (t || _class)();
+};
+_class.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({
+  type: _class,
+  selectors: [["app-studentlist"]],
+  decls: 21,
+  vars: 1,
+  consts: [[1, "container"], [4, "ngFor", "ngForOf"]],
+  template: function StudentlistComponent_Template(rf, ctx) {
+    if (rf & 1) {
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "p");
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1, "studentlist works!");
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "div", 0)(3, "h1");
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](4, "fetching all the students details");
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](5, "table")(6, "thead")(7, "th");
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](8, "ID");
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](9, "th");
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](10, "EMAIL");
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](11, "th");
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](12, "NAME");
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](13, "th");
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](14, "GENDER");
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](15, "th");
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](16, "DEPT");
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](17, "th");
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](18, "LANGUAGE");
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]()();
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](19, "tbody");
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](20, StudentlistComponent_tr_20_Template, 14, 6, "tr", 1);
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]()()();
+    }
+    if (rf & 2) {
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](20);
+      _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngForOf", ctx.students);
+    }
+  },
+  dependencies: [_angular_common__WEBPACK_IMPORTED_MODULE_2__.NgForOf],
+  styles: ["/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsInNvdXJjZVJvb3QiOiIifQ== */"]
+});
+
+/***/ }),
+
+/***/ 4913:
+/*!*********************!*\
+  !*** ./src/main.ts ***!
+  \*********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser */ 6480);
+/* harmony import */ var _app_app_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./app/app.module */ 8629);
+
+
+_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__.platformBrowser().bootstrapModule(_app_app_module__WEBPACK_IMPORTED_MODULE_0__.AppModule).catch(err => console.error(err));
+
+/***/ }),
+
+/***/ 3505:
+/*!******************************************!*\
+  !*** ./src/app/studentlist/student.json ***!
+  \******************************************/
+/***/ ((module) => {
+
+module.exports = JSON.parse('[{"id":1,"name":"meet","email":"meetjani801@gmail.com","gender":"male","dept":"computer engneering","language":"gujarati"},{"id":2,"name":"rajesh","email":"rajesh54@gmail.com","gender":"male","dept":"civil engneering","language":"German"},{"id":3,"name":"raman","email":"raman65@gmail.com","gender":"male","dept":"electrical engneering","language":"france"},{"id":4,"name":"mayuri","email":"mayuri54@gmail.com","gender":"Female","dept":"mechenical engneering","language":"chinese"},{"id":5,"name":"ramini","email":"ramini87#@gmail.com","gender":"Female","dept":"mechenical engneering","language":"hindi"}]');
+
+/***/ })
+
+},
+/******/ __webpack_require__ => { // webpackRuntimeModules
+/******/ var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
+/******/ __webpack_require__.O(0, ["vendor"], () => (__webpack_exec__(6576), __webpack_exec__(4913)));
+/******/ var __webpack_exports__ = __webpack_require__.O();
+/******/ }
+]);
+//# sourceMappingURL=main.js.map

@@ -1,0 +1,31 @@
+<p>registration-management works!</p>
+<h1>Registration Management</h1>
+
+<!-- Display registration data in a table -->
+<table border="1">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let registration of registrations; let i = index">
+      <td>{{ registration.name }}</td>
+      <td>{{ registration.email }}</td>
+      <td>
+        <button (click)="editRegistration(i)">Edit</button>
+        <button (click)="deleteRegistration(i)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Form to add/edit registrations -->
+<form (submit)="saveRegistration()">
+  <input type="text" [(ngModel)]="newRegistration.name" placeholder="Name">
+  <input type="email" [(ngModel)]="newRegistration.email" placeholder="Email">
+  <button type="submit">Save</button>
+  <button type="button" (click)="cancelEdit()">Cancel</button>
+</form>

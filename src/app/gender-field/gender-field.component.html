@@ -1,0 +1,9 @@
+<p>gender-field works!</p>
+<h2>Select a Salutation:</h2>
+<select [(ngModel)]="selectedSalutation1" name="salutation">
+  <option *ngFor="let salutation of salutations1" [value]="salutation">{{ salutation }}</option>
+</select>
+
+<h2>select a Gender:</h2>
+<input type="text" [value]="getGender()" disabled />
+<button>submit</button>

@@ -1,0 +1,18 @@
+<p>moblienumber-field works!</p>
+<form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+  <!-- Other form fields -->
+
+  <div class="form-group">
+    <label for="mobileNumber">Mobile Number<span class="required">*</span></label>
+    <input type="text" id="mobileNumber" name="mobileNumber" class="form-control" 
+           formControlName="mobileNumber">
+    <div *ngIf="submitted && registrationForm.get('mobileNumber')hasError('required')" class="text-danger">
+      Mobile Number is required.
+    </div>
+    <div *ngIf="submitted && registrationForm.get('mobileNumber')hasError('pattern')" class="text-danger">
+      Invalid mobile number format.
+    </div>
+  </div>
+
+<button>submit</button>
+  </form>

@@ -1,0 +1,37 @@
+<h2>form</h2>
+
+<form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="salutation">Salutation<span class="required">*</span></label>
+    <select id="salutation" name="salutation" class="form-control" 
+            formControlName="salutation">
+      <option value="" disabled selected>Select Salutation</option>
+      <option value="Mr">Mr</option>
+      <option value="Mrs">Mrs</option>
+      <option value="Ms">Ms</option>
+      <option value="Dr">Dr</option>
+    </select>
+    <div *ngIf="submitted && registrationForm.get('salutation')hasError('required')" class="text-danger">
+      Salutation is required.
+    </div>
+  </div>
+  
+  <!-- Other form fields -->
+  
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<app-first-namefield></app-first-namefield>
+<app-last-namefield></app-last-namefield>
+<app-email-field></app-email-field>
+<app-moblienumber-field></app-moblienumber-field>
+<app-department-field></app-department-field>
+<app-gender-field></app-gender-field>
+<app-language-field></app-language-field>
+<app-salary-field></app-salary-field>
+<app-dob-field></app-dob-field>
+<app-age-field></app-age-field>
+<app-registraction-grid></app-registraction-grid>
+<app-registration-management></app-registration-management>
+<app-registraction-validate-form></app-registraction-validate-form>
+<app-studentlist></app-studentlist>

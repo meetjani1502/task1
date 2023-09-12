@@ -1,0 +1,26 @@
+<p>department-field works!</p>
+<form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+  <!-- Other form fields -->
+
+  <div class="form-group">
+    <label for="department">Department</label>
+    <select
+      id="department"
+      name="department"
+      class="form-control"
+      formControlName="department"
+    >
+      <option value="">Select Department</option>
+      <option value="computer engneering">computer engneering</option>
+      <option value="electrical engneering">electrical engneering</option>
+      <option value="mechenical engneering">mechenical engneering</option>
+      <option value="civil engneering">civil engneering</option>
+
+      <option *ngFor="let dept of departments" [value]="dept.id">
+        {{ dept.name }}
+      </option>
+    </select>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

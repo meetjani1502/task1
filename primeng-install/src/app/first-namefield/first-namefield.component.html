@@ -1,0 +1,15 @@
+<p>first-namefield works!</p>
+<form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="firstName">First Name<span class="required">*</span></label>
+    <input type="text" id="firstName" name="firstName" class="form-control" 
+           formControlName="firstName">
+    <div *ngIf="submitted && registrationForm.get('firstName').hasError('required')" class="text-danger">
+      First Name is required.
+    </div>
+  </div>
+
+  <!-- Add other form fields here -->
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

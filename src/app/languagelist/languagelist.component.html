@@ -1,0 +1,17 @@
+<p>languagelist works!</p>
+<p>studentlist works!</p>
+<div class="container">
+  <h1>fetching all the languages details</h1>
+  <table>
+    <thead>
+      <th>ID</th>
+      <th>LANGUAGENAME</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let language of languages">
+        <td>{{ language.id }}</td>
+        <td>{{ language.languageName }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "salutation": "Mr",
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "john@example.com",
+    "mobileNumber": "1234567890",
+    "department": "IT",
+    "gender": "Male",
+    "languages": ["English", "Spanish"],
+    "salary": 50000,
+    "dob": "1990-01-15",
+    "age": 33
+  }
+]

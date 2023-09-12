@@ -1,0 +1,25 @@
+<p>studentlist works!</p>
+<div class="container">
+  <h1>fetching all the students details</h1>
+  <table>
+    <thead>
+      <th>ID</th>
+      <th>EMAIL</th>
+      <th>NAME</th>
+      <th>GENDER</th>
+      <th>DEPT</th>
+      <th>LANGUAGE</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let student of students">
+        <td>{{student.id}}</td>
+        <td>{{student.name}}</td>
+        <td>{{student.email}}</td>
+        <td>{{student.gender}}</td>
+        <td>{{student.dept}}</td>
+        <td>{{student.language}}</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
